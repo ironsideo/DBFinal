@@ -7,7 +7,7 @@ use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use App\User;
 
-class DataTypeTest extends TestCase
+class DataTypeTest2 extends TestCase
 {
     /**
      * A basic unit test example.
@@ -16,7 +16,8 @@ class DataTypeTest extends TestCase
      */
     public function testExample()
     {
-       $user = User::inRandomOrder()->first();
-       $this->assertInstanceOf( 'App\User' ,$user);
+        $user = User::inRandomOrder()->first();
+        $this->assertInternalType( 'int' ,$user->id);
+
     }
 }
